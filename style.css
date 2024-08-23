@@ -1,0 +1,58 @@
+body {
+    height: 100%;
+    padding: 70px;
+    background-color: #ed7373;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .card {
+    position: relative;
+    width: 300px;
+    height: 425px;
+    border: 10px solid #eb95d7;
+    margin: 60px auto 0 auto;
+ }
+ 
+  .card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0px 0px -10px;
+    border: 10px solid #f48ccc;
+    backface-visibility: hidden;
+    background-color: #ffa1e3;
+    background-size: contain;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+  }
+  .card:hover .front {
+    transform: perspective(800px) rotateY(-170deg);
+    background-color: #ff99ec;
+  }
+  .card:hover .back {
+    transform: perspective(800px) rotateY(-170deg);
+   background-color: #fe98f1;
+  }
+  .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #f587ea;
+    margin: -10px 0px 0px -10px;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+    background-color: #e6f0e6;
+   
+  }
+  .message
+  {
+    height: 425px;
+    width: 300px;
+    
+  }
+  
